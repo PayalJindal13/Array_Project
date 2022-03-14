@@ -1,12 +1,22 @@
-let mapFunction = require('./map.js');
-module.exports = function flatten(elements){
-    if (elements){
-        let arr = mapFunction(elements,cb = element => {
-            if (Array.isArray(element)) return cb(element[0]);
-            return element;
-        });
-    return arr;
-    }
-    return [];
-    }
- 
+
+
+
+function cb(element, depth){
+    if (Array.isArray(element) && depth) {
+                  return cb(element[0], depth-1);
+              }
+              return element;
+          }
+
+
+module.exports = function flatten(elements, depth){
+    let arr=[];
+      if (elements){
+          for (let index = 0; index < elements.length; index++){
+            arr.push(cb(elements[index], depth));
+            }
+      return arr;
+      }
+      return [];
+      }
+

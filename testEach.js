@@ -3,7 +3,8 @@ const items = [1,2,3,4,5,5];
 
 
 // Testcases
-testEach.each(items, cb = (element, index) => console.log(`${element} is at index ${index}`)); 
+testEach.each(items, cb = (element, index, elements ) => {console.log(`${element} is at index ${index}`)});
+
 
 testEach.each();        // returns empty string
 testEach.each([]);      // returns empty string

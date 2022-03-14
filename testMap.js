@@ -3,7 +3,7 @@ items = [1,2,3,4,5,5];
 let mapFunction = require('./map.js');
 
 //Testcases
-console.log(mapFunction(items,cb = element => { return element * element })); // returns [1, 4, 9, 16, 25, 25]
+console.log(mapFunction(items,cb = (element, index, elements) => { return element * element })); // returns [1, 4, 9, 16, 25, 25]
 
 console.log(mapFunction());        // returns empty array
 console.log(mapFunction([]));      // returns empty array
