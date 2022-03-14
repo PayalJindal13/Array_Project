@@ -8,7 +8,9 @@ module.exports = function flatten(elements){
                 arr = arr.concat(flatten(elements[index]));
             }
             else{
-                arr.push(elements[index]);
+                if(elements[index]){
+                    arr.push(elements[index]);
+                }
             }
             }
         return arr;
