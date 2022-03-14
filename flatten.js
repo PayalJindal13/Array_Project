@@ -1,19 +1,15 @@
 
 
-
-function cb(element, depth){
-    if (Array.isArray(element) && depth) {
-        return cb(element[0], depth-1);
-    }
-    return element;
-}
-
-
-module.exports = function flatten(elements, depth){
-    let arr=[];
+module.exports = function flatten(elements){
+    let arr = [];
       if (elements){
         for (let index = 0; index < elements.length; index++){
-            arr.push(cb(elements[index], depth));
+            if (Array.isArray(elements[index])) {
+                arr = arr.concat(flatten(elements[index]));
+            }
+            else{
+                arr.push(elements[index]);
+            }
             }
         return arr;
       }
