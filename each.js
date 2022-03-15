@@ -1,5 +1,5 @@
 
-function executeForEachElement(elements, cb){
+module.exports = function executeForEachElement(elements, cb){
     if (elements && cb){
         for (let index = 0; index < elements.length; index++){
             cb(elements[index], index, elements);
@@ -9,4 +9,3 @@ function executeForEachElement(elements, cb){
         console.log('');
     }
 }
-module.exports = { each };
