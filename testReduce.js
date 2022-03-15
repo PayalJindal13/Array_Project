@@ -3,7 +3,8 @@ let reduceArrayElements = require('./reduce');
 
 // Testcases
 console.log(reduceArrayElements(items, cb = (startingValue, element, index, elements) => { return startingValue + element },10));  // Expects output 30
-console.log(reduceArrayElements(items, cb = (startingValue, element, index, elements) => { return startingValue + element },));  // Expects output 21
+console.log(reduceArrayElements(items, cb = (startingValue, element, index, elements) => { return startingValue + element },0));  // Expects output 20
+console.log(reduceArrayElements(items,  cb = (startingValue, element, index, elements) => { return startingValue + element }));   // Expects output 20
 console.log(reduceArrayElements());        // returns 0
 console.log(reduceArrayElements([]));      // returns 0
 console.log(reduceArrayElements(null));    // returns 0
