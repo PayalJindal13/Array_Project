@@ -1,6 +1,6 @@
 
 
-module.exports = function flatten(elements){
+module.exports = function flatten(elements, depth){
     let arr = [];
       if (elements){
         for (let index = 0; index < elements.length; index++){
