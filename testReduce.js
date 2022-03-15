@@ -1,19 +1,19 @@
 items =[1,2,3,4,5,5];
-let reduceFunction = require('./reduce');
+let reduceArray = require('./reduce');
 
 // Testcases
-console.log(reduceFunction(items, cb = (startingValue, element, index, elements) => { return startingValue + element },10));  // Expects output 30
-console.log(reduceFunction(items, cb = (startingValue, element, index, elements) => { return startingValue + element }));  // Expects output 21
-console.log(reduceFunction());        // returns 0
-console.log(reduceFunction([]));      // returns 0
-console.log(reduceFunction(null));    // returns 0
-console.log(reduceFunction(undefined)); // returns 0
+console.log(reduceArrayElements(items, cb = (startingValue, element, index, elements) => { return startingValue + element },10));  // Expects output 30
+console.log(reduceArrayElements(items, cb = (startingValue, element, index, elements) => { return startingValue + element }));  // Expects output 21
+console.log(reduceArrayElements());        // returns 0
+console.log(reduceArrayElements([]));      // returns 0
+console.log(reduceArrayElements(null));    // returns 0
+console.log(reduceArrayElements(undefined)); // returns 0
 
-console.log(reduceFunction([],null,10)); // returns 0
-console.log(reduceFunction([],undefined,10));    // returns 0
+console.log(reduceArrayElements([],null,10)); // returns 0
+console.log(reduceArrayElements([],undefined,10));    // returns 0
 
-console.log(reduceFunction(undefined,undefined,10));     // returns 0
-console.log(reduceFunction(undefined,null,10));          // returns 0
+console.log(reduceArrayElements(undefined,undefined,10));     // returns 0
+console.log(reduceArrayElements(undefined,null,10));          // returns 0
 
-console.log(reduceFunction(null,undefined,10));          // returns 0
-console.log(reduceFunction(null,null,10));               // returns 0
+console.log(reduceArrayElements(null,undefined,10));          // returns 0
+console.log(reduceArrayElements(null,null,10));               // returns 0

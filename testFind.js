@@ -1,22 +1,22 @@
 items = [1,2,3,4,5,5];
-let findFunction = require('./find.js');
+let findElement = require('./find.js');
 
 // Testcases
-console.log(findFunction(items,cb = (element, index, items) => { 
+console.log(findElement(items,cb = (element, index, items) => { 
     return element % 2 === 0 }));  // returns 2
 
-console.log(findFunction([1,5,3],cb = (element, index, items) => { return element % 2 === 0}));  // return undefined
+console.log(findElement([1,5,3],cb = (element, index, items) => { return element % 2 === 0}));  // return undefined
 
-console.log(findFunction());        // returns 0
-console.log(findFunction([]));      // returns 0
-console.log(findFunction(null));    // returns 0
-console.log(findFunction(undefined)); // returns 0
+console.log(findElement());        // returns 0
+console.log(findElement([]));      // returns 0
+console.log(findElement(null));    // returns 0
+console.log(findElement(undefined)); // returns 0
 
-console.log(findFunction([], null )); // returns 0
-console.log(findFunction([], undefined));    // returns 0
+console.log(findElement([], null )); // returns 0
+console.log(findElement([], undefined));    // returns 0
 
-console.log(findFunction(undefined,undefined));     // returns 0
-console.log(findFunction(undefined,null));          // returns 0
+console.log(findElement(undefined,undefined));     // returns 0
+console.log(findElement(undefined,null));          // returns 0
 
-console.log(findFunction(null,undefined));          // returns 0
-console.log(findFunction(null,null));               // returns 0
+console.log(findElement(null,undefined));          // returns 0
+console.log(findElement(null,null));               // returns 0
